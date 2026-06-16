@@ -1,0 +1,23 @@
+# Environnements Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.venv/
+
+# Logs et donnees
+logs/
+data/
+*.parquet
+*.csv
+
+# IDE et Systeme
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Secrets et Configuration
+.env
+.env.local
