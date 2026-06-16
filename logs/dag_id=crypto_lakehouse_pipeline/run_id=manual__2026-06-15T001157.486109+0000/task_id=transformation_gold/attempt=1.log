@@ -1,0 +1,18 @@
+[2026-06-15T00:12:10.827+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: crypto_lakehouse_pipeline.transformation_gold manual__2026-06-15T00:11:57.486109+00:00 [queued]>
+[2026-06-15T00:12:10.854+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: crypto_lakehouse_pipeline.transformation_gold manual__2026-06-15T00:11:57.486109+00:00 [queued]>
+[2026-06-15T00:12:10.856+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2026-06-15T00:12:17.818+0000] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): transformation_gold> on 2026-06-15 00:11:57.486109+00:00
+[2026-06-15T00:12:17.838+0000] {standard_task_runner.py:60} INFO - Started process 844 to run task
+[2026-06-15T00:12:17.849+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'crypto_lakehouse_pipeline', 'transformation_gold', 'manual__2026-06-15T00:11:57.486109+00:00', '--job-id', '8', '--raw', '--subdir', 'DAGS_FOLDER/crypto_dag.py', '--cfg-path', '/tmp/tmprmd3gxz9']
+[2026-06-15T00:12:17.855+0000] {standard_task_runner.py:88} INFO - Job 8: Subtask transformation_gold
+[2026-06-15T00:12:10.612+0000] {task_command.py:423} INFO - Running <TaskInstance: crypto_lakehouse_pipeline.transformation_gold manual__2026-06-15T00:11:57.486109+00:00 [running]> on host b1425b41afa7
+[2026-06-15T00:12:10.937+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data_engineer' AIRFLOW_CTX_DAG_ID='crypto_lakehouse_pipeline' AIRFLOW_CTX_TASK_ID='transformation_gold' AIRFLOW_CTX_EXECUTION_DATE='2026-06-15T00:11:57.486109+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-06-15T00:11:57.486109+00:00'
+[2026-06-15T00:12:10.942+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-06-15T00:12:10.947+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'echo "Exécution du SQL Spark..." && sleep 3 && echo "Table métier prête pour le Dashboard (Gold)"']
+[2026-06-15T00:12:10.982+0000] {subprocess.py:86} INFO - Output:
+[2026-06-15T00:12:10.989+0000] {subprocess.py:93} INFO - Exécution du SQL Spark...
+[2026-06-15T00:12:13.999+0000] {subprocess.py:93} INFO - Table métier prête pour le Dashboard (Gold)
+[2026-06-15T00:12:14.001+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-06-15T00:12:14.071+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=crypto_lakehouse_pipeline, task_id=transformation_gold, execution_date=20260615T001157, start_date=20260615T001210, end_date=20260615T001214
+[2026-06-15T00:12:14.134+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-06-15T00:12:14.177+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

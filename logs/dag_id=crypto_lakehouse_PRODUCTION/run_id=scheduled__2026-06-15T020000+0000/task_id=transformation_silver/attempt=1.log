@@ -1,0 +1,138 @@
+[2026-06-15T02:14:57.914+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: crypto_lakehouse_PRODUCTION.transformation_silver scheduled__2026-06-15T02:00:00+00:00 [queued]>
+[2026-06-15T02:14:57.933+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: crypto_lakehouse_PRODUCTION.transformation_silver scheduled__2026-06-15T02:00:00+00:00 [queued]>
+[2026-06-15T02:14:57.934+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2026-06-15T02:14:57.961+0000] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): transformation_silver> on 2026-06-15 02:00:00+00:00
+[2026-06-15T02:14:57.975+0000] {standard_task_runner.py:60} INFO - Started process 943 to run task
+[2026-06-15T02:14:57.982+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'crypto_lakehouse_PRODUCTION', 'transformation_silver', 'scheduled__2026-06-15T02:00:00+00:00', '--job-id', '124', '--raw', '--subdir', 'DAGS_FOLDER/crypto_dag.py', '--cfg-path', '/tmp/tmp7prpwurf']
+[2026-06-15T02:14:57.987+0000] {standard_task_runner.py:88} INFO - Job 124: Subtask transformation_silver
+[2026-06-15T02:14:58.098+0000] {task_command.py:423} INFO - Running <TaskInstance: crypto_lakehouse_PRODUCTION.transformation_silver scheduled__2026-06-15T02:00:00+00:00 [running]> on host 4f520f9886eb
+[2026-06-15T02:14:58.309+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data_engineer' AIRFLOW_CTX_DAG_ID='crypto_lakehouse_PRODUCTION' AIRFLOW_CTX_TASK_ID='transformation_silver' AIRFLOW_CTX_EXECUTION_DATE='2026-06-15T02:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-06-15T02:00:00+00:00'
+[2026-06-15T02:14:58.311+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-06-15T02:14:58.314+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'docker exec spark-master /opt/spark/bin/spark-submit --packages org.apache.hadoop:hadoop-aws:3.3.4,com.amazonaws:aws-java-sdk-bundle:1.12.262 /opt/spark/code/transformation_silver.py']
+[2026-06-15T02:14:58.341+0000] {subprocess.py:86} INFO - Output:
+[2026-06-15T02:15:01.680+0000] {subprocess.py:93} INFO - :: loading settings :: url = jar:file:/opt/spark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+[2026-06-15T02:15:01.843+0000] {subprocess.py:93} INFO - Ivy Default Cache set to: /root/.ivy2/cache
+[2026-06-15T02:15:01.845+0000] {subprocess.py:93} INFO - The jars for the packages stored in: /root/.ivy2/jars
+[2026-06-15T02:15:01.853+0000] {subprocess.py:93} INFO - org.apache.hadoop#hadoop-aws added as a dependency
+[2026-06-15T02:15:01.855+0000] {subprocess.py:93} INFO - com.amazonaws#aws-java-sdk-bundle added as a dependency
+[2026-06-15T02:15:01.856+0000] {subprocess.py:93} INFO - :: resolving dependencies :: org.apache.spark#spark-submit-parent-e2c442fd-d2a7-443e-92ea-48a8f598e482;1.0
+[2026-06-15T02:15:01.857+0000] {subprocess.py:93} INFO - 	confs: [default]
+[2026-06-15T02:15:02.149+0000] {subprocess.py:93} INFO - 	found org.apache.hadoop#hadoop-aws;3.3.4 in central
+[2026-06-15T02:15:02.194+0000] {subprocess.py:93} INFO - 	found com.amazonaws#aws-java-sdk-bundle;1.12.262 in central
+[2026-06-15T02:15:02.246+0000] {subprocess.py:93} INFO - 	found org.wildfly.openssl#wildfly-openssl;1.0.7.Final in central
+[2026-06-15T02:15:02.282+0000] {subprocess.py:93} INFO - :: resolution report :: resolve 412ms :: artifacts dl 15ms
+[2026-06-15T02:15:02.284+0000] {subprocess.py:93} INFO - 	:: modules in use:
+[2026-06-15T02:15:02.285+0000] {subprocess.py:93} INFO - 	com.amazonaws#aws-java-sdk-bundle;1.12.262 from central in [default]
+[2026-06-15T02:15:02.286+0000] {subprocess.py:93} INFO - 	org.apache.hadoop#hadoop-aws;3.3.4 from central in [default]
+[2026-06-15T02:15:02.288+0000] {subprocess.py:93} INFO - 	org.wildfly.openssl#wildfly-openssl;1.0.7.Final from central in [default]
+[2026-06-15T02:15:02.289+0000] {subprocess.py:93} INFO - 	---------------------------------------------------------------------
+[2026-06-15T02:15:02.290+0000] {subprocess.py:93} INFO - 	|                  |            modules            ||   artifacts   |
+[2026-06-15T02:15:02.292+0000] {subprocess.py:93} INFO - 	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+[2026-06-15T02:15:02.293+0000] {subprocess.py:93} INFO - 	---------------------------------------------------------------------
+[2026-06-15T02:15:02.297+0000] {subprocess.py:93} INFO - 	|      default     |   3   |   0   |   0   |   0   ||   3   |   0   |
+[2026-06-15T02:15:02.298+0000] {subprocess.py:93} INFO - 	---------------------------------------------------------------------
+[2026-06-15T02:15:02.300+0000] {subprocess.py:93} INFO - :: retrieving :: org.apache.spark#spark-submit-parent-e2c442fd-d2a7-443e-92ea-48a8f598e482
+[2026-06-15T02:15:02.301+0000] {subprocess.py:93} INFO - 	confs: [default]
+[2026-06-15T02:15:02.308+0000] {subprocess.py:93} INFO - 	0 artifacts copied, 3 already retrieved (0kB/14ms)
+[2026-06-15T02:15:02.724+0000] {subprocess.py:93} INFO - 26/06/15 02:15:02 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2026-06-15T02:15:04.089+0000] {subprocess.py:93} INFO - Initialisation de Spark (téléchargement des connecteurs S3 en cours...)
+[2026-06-15T02:15:04.402+0000] {subprocess.py:93} INFO - 26/06/15 02:15:04 INFO SparkContext: Running Spark version 3.5.1
+[2026-06-15T02:15:04.403+0000] {subprocess.py:93} INFO - 26/06/15 02:15:04 INFO SparkContext: OS info Linux, 6.6.87.2-microsoft-standard-WSL2, amd64
+[2026-06-15T02:15:04.404+0000] {subprocess.py:93} INFO - 26/06/15 02:15:04 INFO SparkContext: Java version 11.0.22
+[2026-06-15T02:15:04.461+0000] {subprocess.py:93} INFO - 26/06/15 02:15:04 INFO ResourceUtils: ==============================================================
+[2026-06-15T02:15:04.463+0000] {subprocess.py:93} INFO - 26/06/15 02:15:04 INFO ResourceUtils: No custom resources configured for spark.driver.
+[2026-06-15T02:15:04.464+0000] {subprocess.py:93} INFO - 26/06/15 02:15:04 INFO ResourceUtils: ==============================================================
+[2026-06-15T02:15:04.465+0000] {subprocess.py:93} INFO - 26/06/15 02:15:04 INFO SparkContext: Submitted application: Bronze_to_Silver_Crypto
+[2026-06-15T02:15:04.522+0000] {subprocess.py:93} INFO - 26/06/15 02:15:04 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[2026-06-15T02:15:04.553+0000] {subprocess.py:93} INFO - 26/06/15 02:15:04 INFO ResourceProfile: Limiting resource is cpu
+[2026-06-15T02:15:04.555+0000] {subprocess.py:93} INFO - 26/06/15 02:15:04 INFO ResourceProfileManager: Added ResourceProfile id: 0
+[2026-06-15T02:15:04.706+0000] {subprocess.py:93} INFO - 26/06/15 02:15:04 INFO SecurityManager: Changing view acls to: root
+[2026-06-15T02:15:04.708+0000] {subprocess.py:93} INFO - 26/06/15 02:15:04 INFO SecurityManager: Changing modify acls to: root
+[2026-06-15T02:15:04.711+0000] {subprocess.py:93} INFO - 26/06/15 02:15:04 INFO SecurityManager: Changing view acls groups to:
+[2026-06-15T02:15:04.713+0000] {subprocess.py:93} INFO - 26/06/15 02:15:04 INFO SecurityManager: Changing modify acls groups to:
+[2026-06-15T02:15:04.715+0000] {subprocess.py:93} INFO - 26/06/15 02:15:04 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: root; groups with view permissions: EMPTY; users with modify permissions: root; groups with modify permissions: EMPTY
+[2026-06-15T02:15:05.203+0000] {subprocess.py:93} INFO - 26/06/15 02:15:05 INFO Utils: Successfully started service 'sparkDriver' on port 36267.
+[2026-06-15T02:15:05.268+0000] {subprocess.py:93} INFO - 26/06/15 02:15:05 INFO SparkEnv: Registering MapOutputTracker
+[2026-06-15T02:15:05.334+0000] {subprocess.py:93} INFO - 26/06/15 02:15:05 INFO SparkEnv: Registering BlockManagerMaster
+[2026-06-15T02:15:05.371+0000] {subprocess.py:93} INFO - 26/06/15 02:15:05 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[2026-06-15T02:15:05.373+0000] {subprocess.py:93} INFO - 26/06/15 02:15:05 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+[2026-06-15T02:15:05.380+0000] {subprocess.py:93} INFO - 26/06/15 02:15:05 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+[2026-06-15T02:15:05.424+0000] {subprocess.py:93} INFO - 26/06/15 02:15:05 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-5e0ce0a1-5635-40b8-87f2-8cc859f3b7bc
+[2026-06-15T02:15:05.456+0000] {subprocess.py:93} INFO - 26/06/15 02:15:05 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+[2026-06-15T02:15:05.512+0000] {subprocess.py:93} INFO - 26/06/15 02:15:05 INFO SparkEnv: Registering OutputCommitCoordinator
+[2026-06-15T02:15:05.791+0000] {subprocess.py:93} INFO - 26/06/15 02:15:05 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+[2026-06-15T02:15:05.920+0000] {subprocess.py:93} INFO - 26/06/15 02:15:05 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+[2026-06-15T02:15:05.995+0000] {subprocess.py:93} INFO - 26/06/15 02:15:05 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.apache.hadoop_hadoop-aws-3.3.4.jar at spark://83e8370210db:36267/jars/org.apache.hadoop_hadoop-aws-3.3.4.jar with timestamp 1781489704376
+[2026-06-15T02:15:05.996+0000] {subprocess.py:93} INFO - 26/06/15 02:15:05 INFO SparkContext: Added JAR file:///root/.ivy2/jars/com.amazonaws_aws-java-sdk-bundle-1.12.262.jar at spark://83e8370210db:36267/jars/com.amazonaws_aws-java-sdk-bundle-1.12.262.jar with timestamp 1781489704376
+[2026-06-15T02:15:05.997+0000] {subprocess.py:93} INFO - 26/06/15 02:15:05 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.wildfly.openssl_wildfly-openssl-1.0.7.Final.jar at spark://83e8370210db:36267/jars/org.wildfly.openssl_wildfly-openssl-1.0.7.Final.jar with timestamp 1781489704376
+[2026-06-15T02:15:06.003+0000] {subprocess.py:93} INFO - 26/06/15 02:15:06 INFO SparkContext: Added file file:///root/.ivy2/jars/org.apache.hadoop_hadoop-aws-3.3.4.jar at spark://83e8370210db:36267/files/org.apache.hadoop_hadoop-aws-3.3.4.jar with timestamp 1781489704376
+[2026-06-15T02:15:06.007+0000] {subprocess.py:93} INFO - 26/06/15 02:15:06 INFO Utils: Copying /root/.ivy2/jars/org.apache.hadoop_hadoop-aws-3.3.4.jar to /tmp/spark-d96c339c-455b-4f40-8f90-63bb6a3ea7ef/userFiles-38c6f951-d2a3-4dd5-b831-1b04e4c28952/org.apache.hadoop_hadoop-aws-3.3.4.jar
+[2026-06-15T02:15:06.037+0000] {subprocess.py:93} INFO - 26/06/15 02:15:06 INFO SparkContext: Added file file:///root/.ivy2/jars/com.amazonaws_aws-java-sdk-bundle-1.12.262.jar at spark://83e8370210db:36267/files/com.amazonaws_aws-java-sdk-bundle-1.12.262.jar with timestamp 1781489704376
+[2026-06-15T02:15:06.039+0000] {subprocess.py:93} INFO - 26/06/15 02:15:06 INFO Utils: Copying /root/.ivy2/jars/com.amazonaws_aws-java-sdk-bundle-1.12.262.jar to /tmp/spark-d96c339c-455b-4f40-8f90-63bb6a3ea7ef/userFiles-38c6f951-d2a3-4dd5-b831-1b04e4c28952/com.amazonaws_aws-java-sdk-bundle-1.12.262.jar
+[2026-06-15T02:15:07.483+0000] {subprocess.py:93} INFO - 26/06/15 02:15:07 INFO SparkContext: Added file file:///root/.ivy2/jars/org.wildfly.openssl_wildfly-openssl-1.0.7.Final.jar at spark://83e8370210db:36267/files/org.wildfly.openssl_wildfly-openssl-1.0.7.Final.jar with timestamp 1781489704376
+[2026-06-15T02:15:07.484+0000] {subprocess.py:93} INFO - 26/06/15 02:15:07 INFO Utils: Copying /root/.ivy2/jars/org.wildfly.openssl_wildfly-openssl-1.0.7.Final.jar to /tmp/spark-d96c339c-455b-4f40-8f90-63bb6a3ea7ef/userFiles-38c6f951-d2a3-4dd5-b831-1b04e4c28952/org.wildfly.openssl_wildfly-openssl-1.0.7.Final.jar
+[2026-06-15T02:15:07.704+0000] {subprocess.py:93} INFO - 26/06/15 02:15:07 INFO StandaloneAppClient$ClientEndpoint: Connecting to master spark://spark-master:7077...
+[2026-06-15T02:15:07.798+0000] {subprocess.py:93} INFO - 26/06/15 02:15:07 INFO TransportClientFactory: Successfully created connection to spark-master/172.19.0.4:7077 after 59 ms (0 ms spent in bootstraps)
+[2026-06-15T02:15:07.999+0000] {subprocess.py:93} INFO - 26/06/15 02:15:07 INFO StandaloneSchedulerBackend: Connected to Spark cluster with app ID app-20260615021507-0011
+[2026-06-15T02:15:08.002+0000] {subprocess.py:93} INFO - 26/06/15 02:15:08 INFO StandaloneAppClient$ClientEndpoint: Executor added: app-20260615021507-0011/0 on worker-20260615013924-172.19.0.8-33189 (172.19.0.8:33189) with 2 core(s)
+[2026-06-15T02:15:08.008+0000] {subprocess.py:93} INFO - 26/06/15 02:15:08 INFO StandaloneSchedulerBackend: Granted executor ID app-20260615021507-0011/0 on hostPort 172.19.0.8:33189 with 2 core(s), 1024.0 MiB RAM
+[2026-06-15T02:15:08.025+0000] {subprocess.py:93} INFO - 26/06/15 02:15:08 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 37397.
+[2026-06-15T02:15:08.026+0000] {subprocess.py:93} INFO - 26/06/15 02:15:08 INFO NettyBlockTransferService: Server created on 83e8370210db:37397
+[2026-06-15T02:15:08.030+0000] {subprocess.py:93} INFO - 26/06/15 02:15:08 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+[2026-06-15T02:15:08.047+0000] {subprocess.py:93} INFO - 26/06/15 02:15:08 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 83e8370210db, 37397, None)
+[2026-06-15T02:15:08.055+0000] {subprocess.py:93} INFO - 26/06/15 02:15:08 INFO BlockManagerMasterEndpoint: Registering block manager 83e8370210db:37397 with 434.4 MiB RAM, BlockManagerId(driver, 83e8370210db, 37397, None)
+[2026-06-15T02:15:08.060+0000] {subprocess.py:93} INFO - 26/06/15 02:15:08 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 83e8370210db, 37397, None)
+[2026-06-15T02:15:08.063+0000] {subprocess.py:93} INFO - 26/06/15 02:15:08 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 83e8370210db, 37397, None)
+[2026-06-15T02:15:08.135+0000] {subprocess.py:93} INFO - 26/06/15 02:15:08 INFO StandaloneAppClient$ClientEndpoint: Executor updated: app-20260615021507-0011/0 is now RUNNING
+[2026-06-15T02:15:08.518+0000] {subprocess.py:93} INFO - 26/06/15 02:15:08 INFO StandaloneSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.0
+[2026-06-15T02:15:08.964+0000] {subprocess.py:93} INFO - Spark est prêt !
+[2026-06-15T02:15:08.967+0000] {subprocess.py:93} INFO - Lecture des fichiers JSON dans le bucket Bronze...
+[2026-06-15T02:15:38.416+0000] {subprocess.py:93} INFO - Schéma de la couche Bronze :
+[2026-06-15T02:15:38.452+0000] {subprocess.py:93} INFO - root
+[2026-06-15T02:15:38.453+0000] {subprocess.py:93} INFO -  |-- ingestion_timestamp: string (nullable = true)
+[2026-06-15T02:15:38.454+0000] {subprocess.py:93} INFO -  |-- raw_payload: struct (nullable = true)
+[2026-06-15T02:15:38.455+0000] {subprocess.py:93} INFO -  |    |-- bitcoin: struct (nullable = true)
+[2026-06-15T02:15:38.456+0000] {subprocess.py:93} INFO -  |    |    |-- usd: long (nullable = true)
+[2026-06-15T02:15:38.457+0000] {subprocess.py:93} INFO -  |    |    |-- usd_24h_vol: double (nullable = true)
+[2026-06-15T02:15:38.457+0000] {subprocess.py:93} INFO -  |    |-- ethereum: struct (nullable = true)
+[2026-06-15T02:15:38.458+0000] {subprocess.py:93} INFO -  |    |    |-- usd: double (nullable = true)
+[2026-06-15T02:15:38.459+0000] {subprocess.py:93} INFO -  |    |    |-- usd_24h_vol: double (nullable = true)
+[2026-06-15T02:15:38.460+0000] {subprocess.py:93} INFO -  |    |-- solana: struct (nullable = true)
+[2026-06-15T02:15:38.461+0000] {subprocess.py:93} INFO -  |    |    |-- usd: double (nullable = true)
+[2026-06-15T02:15:38.462+0000] {subprocess.py:93} INFO -  |    |    |-- usd_24h_vol: double (nullable = true)
+[2026-06-15T02:15:38.463+0000] {subprocess.py:93} INFO -  |-- source: string (nullable = true)
+[2026-06-15T02:15:38.464+0000] {subprocess.py:93} INFO - 
+[2026-06-15T02:15:38.465+0000] {subprocess.py:93} INFO - Transformation des données...
+[2026-06-15T02:15:38.610+0000] {subprocess.py:93} INFO - Aperçu des données nettoyées (Couche Silver) :
+[2026-06-15T02:15:40.449+0000] {subprocess.py:93} INFO - +--------------------------------+-------------+-------------+---------------------+--------------+-------------------+------------+--------------------+
+[2026-06-15T02:15:40.451+0000] {subprocess.py:93} INFO - |ingestion_timestamp             |source       |bitcoin_price|bitcoin_vol          |ethereum_price|ethereum_vol       |solana_price|solana_vol          |
+[2026-06-15T02:15:40.452+0000] {subprocess.py:93} INFO - +--------------------------------+-------------+-------------+---------------------+--------------+-------------------+------------+--------------------+
+[2026-06-15T02:15:40.453+0000] {subprocess.py:93} INFO - |2026-06-15T01:15:17.187212+00:00|CoinGecko API|65460        |2.3100080795693832E10|1716.52       |8.799376525374523E9|70.94       |1.9160472750423756E9|
+[2026-06-15T02:15:40.454+0000] {subprocess.py:93} INFO - |2026-06-15T01:15:17.175205+00:00|CoinGecko API|65460        |2.3100080795693832E10|1716.52       |8.799376525374523E9|70.94       |1.9160472750423756E9|
+[2026-06-15T02:15:40.455+0000] {subprocess.py:93} INFO - |2026-06-15T01:15:17.178716+00:00|CoinGecko API|65460        |2.3100080795693832E10|1716.52       |8.799376525374523E9|70.94       |1.9160472750423756E9|
+[2026-06-15T02:15:40.456+0000] {subprocess.py:93} INFO - |2026-06-15T01:15:17.175723+00:00|CoinGecko API|65460        |2.3100080795693832E10|1716.52       |8.799376525374523E9|70.94       |1.9160472750423756E9|
+[2026-06-15T02:15:40.457+0000] {subprocess.py:93} INFO - |2026-06-15T01:15:17.199430+00:00|CoinGecko API|65460        |2.3100080795693832E10|1716.52       |8.799376525374523E9|70.94       |1.9160472750423756E9|
+[2026-06-15T02:15:40.458+0000] {subprocess.py:93} INFO - |2026-06-15T01:15:17.175770+00:00|CoinGecko API|65460        |2.3100080795693832E10|1716.52       |8.799376525374523E9|70.94       |1.9160472750423756E9|
+[2026-06-15T02:15:40.459+0000] {subprocess.py:93} INFO - |2026-06-15T01:15:17.200546+00:00|CoinGecko API|65460        |2.3100080795693832E10|1716.52       |8.799376525374523E9|70.94       |1.9160472750423756E9|
+[2026-06-15T02:15:40.460+0000] {subprocess.py:93} INFO - |2026-06-15T01:15:17.178540+00:00|CoinGecko API|65460        |2.3100080795693832E10|1716.52       |8.799376525374523E9|70.94       |1.9160472750423756E9|
+[2026-06-15T02:15:40.461+0000] {subprocess.py:93} INFO - |2026-06-15T01:15:17.189779+00:00|CoinGecko API|65460        |2.3100080795693832E10|1716.52       |8.799376525374523E9|70.94       |1.9160472750423756E9|
+[2026-06-15T02:15:40.462+0000] {subprocess.py:93} INFO - |2026-06-15T01:15:17.178365+00:00|CoinGecko API|65460        |2.3100080795693832E10|1716.52       |8.799376525374523E9|70.94       |1.9160472750423756E9|
+[2026-06-15T02:15:40.463+0000] {subprocess.py:93} INFO - |2026-06-15T01:15:17.180122+00:00|CoinGecko API|65460        |2.3100080795693832E10|1716.52       |8.799376525374523E9|70.94       |1.9160472750423756E9|
+[2026-06-15T02:15:40.464+0000] {subprocess.py:93} INFO - |2026-06-15T01:15:17.192240+00:00|CoinGecko API|65460        |2.3100080795693832E10|1716.52       |8.799376525374523E9|70.94       |1.9160472750423756E9|
+[2026-06-15T02:15:40.465+0000] {subprocess.py:93} INFO - |2026-06-15T01:15:17.175516+00:00|CoinGecko API|65460        |2.3100080795693832E10|1716.52       |8.799376525374523E9|70.94       |1.9160472750423756E9|
+[2026-06-15T02:15:40.466+0000] {subprocess.py:93} INFO - |2026-06-15T01:15:17.198987+00:00|CoinGecko API|65460        |2.3100080795693832E10|1716.52       |8.799376525374523E9|70.94       |1.9160472750423756E9|
+[2026-06-15T02:15:40.467+0000] {subprocess.py:93} INFO - |2026-06-15T01:15:17.175142+00:00|CoinGecko API|65460        |2.3100080795693832E10|1716.52       |8.799376525374523E9|70.94       |1.9160472750423756E9|
+[2026-06-15T02:15:40.468+0000] {subprocess.py:93} INFO - |2026-06-15T01:15:17.177465+00:00|CoinGecko API|65460        |2.3100080795693832E10|1716.52       |8.799376525374523E9|70.94       |1.9160472750423756E9|
+[2026-06-15T02:15:40.469+0000] {subprocess.py:93} INFO - |2026-06-15T01:29:24.661994+00:00|CoinGecko API|65398        |2.3139410331964348E10|1711.45       |8.718539560808987E9|70.78       |1.8866884865863779E9|
+[2026-06-15T02:15:40.470+0000] {subprocess.py:93} INFO - |2026-06-15T01:30:24.350742+00:00|CoinGecko API|65389        |2.3147885324317753E10|1711.41       |8.735940593110868E9|70.78       |1.8861973900614274E9|
+[2026-06-15T02:15:40.471+0000] {subprocess.py:93} INFO - |2026-06-15T01:31:15.133894+00:00|CoinGecko API|65389        |2.3147885324317753E10|1711.41       |8.735940593110868E9|70.78       |1.8861973900614274E9|
+[2026-06-15T02:15:40.471+0000] {subprocess.py:93} INFO - |2026-06-15T01:45:02.043663+00:00|CoinGecko API|65625        |2.3678552134679363E10|1719.43       |8.947251472314257E9|71.21       |1.8888248225046434E9|
+[2026-06-15T02:15:40.472+0000] {subprocess.py:93} INFO - +--------------------------------+-------------+-------------+---------------------+--------------+-------------------+------------+--------------------+
+[2026-06-15T02:15:40.474+0000] {subprocess.py:93} INFO - only showing top 20 rows
+[2026-06-15T02:15:40.474+0000] {subprocess.py:93} INFO - 
+[2026-06-15T02:15:40.475+0000] {subprocess.py:93} INFO - Sauvegarde dans le bucket Silver au format Parquet...
+[2026-06-15T02:15:43.966+0000] {subprocess.py:93} INFO - Succès ! Les données nettoyées ont été sauvegardées dans s3a://silver/market_data/coingecko/
+[2026-06-15T02:15:45.078+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-06-15T02:15:45.170+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=crypto_lakehouse_PRODUCTION, task_id=transformation_silver, execution_date=20260615T020000, start_date=20260615T021457, end_date=20260615T021545
+[2026-06-15T02:15:45.230+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-06-15T02:15:45.276+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check
