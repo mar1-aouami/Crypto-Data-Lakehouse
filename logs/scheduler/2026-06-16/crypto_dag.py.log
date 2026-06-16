@@ -278,3 +278,157 @@
 [2026-06-16T15:36:21.002+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:36:21.001+0000] {dag.py:3036} INFO - Sync 1 DAGs
 [2026-06-16T15:36:21.069+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:36:21.069+0000] {dag.py:3823} INFO - Setting next_dagrun for crypto_lakehouse_PRODUCTION to 2026-06-16 15:30:00+00:00, run_after=2026-06-16 15:45:00+00:00
 [2026-06-16T15:36:21.129+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/crypto_dag.py took 0.293 seconds
+[2026-06-16T15:36:51.644+0000] {processor.py:161} INFO - Started process (PID=419) to work on /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:36:51.649+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/crypto_dag.py for tasks to queue
+[2026-06-16T15:36:51.654+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:36:51.652+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:36:59.732+0000] {processor.py:840} INFO - DAG(s) 'crypto_lakehouse_PRODUCTION' retrieved from /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:36:51.769+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:36:51.768+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-06-16T15:36:51.907+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:36:51.906+0000] {dag.py:3823} INFO - Setting next_dagrun for crypto_lakehouse_PRODUCTION to 2026-06-16 15:30:00+00:00, run_after=2026-06-16 15:45:00+00:00
+[2026-06-16T15:36:51.988+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/crypto_dag.py took 0.475 seconds
+[2026-06-16T15:37:22.175+0000] {processor.py:161} INFO - Started process (PID=424) to work on /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:37:22.181+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/crypto_dag.py for tasks to queue
+[2026-06-16T15:37:22.184+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:37:22.183+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:37:22.254+0000] {processor.py:840} INFO - DAG(s) 'crypto_lakehouse_PRODUCTION' retrieved from /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:37:22.330+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:37:22.330+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-06-16T15:37:22.392+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:37:22.392+0000] {dag.py:3823} INFO - Setting next_dagrun for crypto_lakehouse_PRODUCTION to 2026-06-16 15:30:00+00:00, run_after=2026-06-16 15:45:00+00:00
+[2026-06-16T15:37:22.443+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/crypto_dag.py took 0.281 seconds
+[2026-06-16T15:37:52.643+0000] {processor.py:161} INFO - Started process (PID=429) to work on /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:37:52.646+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/crypto_dag.py for tasks to queue
+[2026-06-16T15:37:52.649+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:37:52.648+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:37:52.718+0000] {processor.py:840} INFO - DAG(s) 'crypto_lakehouse_PRODUCTION' retrieved from /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:37:52.799+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:37:52.799+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-06-16T15:37:52.863+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:37:52.863+0000] {dag.py:3823} INFO - Setting next_dagrun for crypto_lakehouse_PRODUCTION to 2026-06-16 15:30:00+00:00, run_after=2026-06-16 15:45:00+00:00
+[2026-06-16T15:37:52.928+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/crypto_dag.py took 0.294 seconds
+[2026-06-16T15:38:20.586+0000] {processor.py:161} INFO - Started process (PID=434) to work on /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:38:20.589+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/crypto_dag.py for tasks to queue
+[2026-06-16T15:38:20.593+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:38:20.592+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:38:20.665+0000] {processor.py:840} INFO - DAG(s) 'crypto_lakehouse_PRODUCTION' retrieved from /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:38:20.736+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:38:20.736+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-06-16T15:38:20.801+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:38:20.800+0000] {dag.py:3823} INFO - Setting next_dagrun for crypto_lakehouse_PRODUCTION to 2026-06-16 15:30:00+00:00, run_after=2026-06-16 15:45:00+00:00
+[2026-06-16T15:38:20.856+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/crypto_dag.py took 0.283 seconds
+[2026-06-16T15:38:53.659+0000] {processor.py:161} INFO - Started process (PID=439) to work on /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:38:53.662+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/crypto_dag.py for tasks to queue
+[2026-06-16T15:38:53.665+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:38:53.664+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:38:45.631+0000] {processor.py:840} INFO - DAG(s) 'crypto_lakehouse_PRODUCTION' retrieved from /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:38:45.724+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:38:45.723+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-06-16T15:38:45.790+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:38:45.790+0000] {dag.py:3823} INFO - Setting next_dagrun for crypto_lakehouse_PRODUCTION to 2026-06-16 15:30:00+00:00, run_after=2026-06-16 15:45:00+00:00
+[2026-06-16T15:38:45.839+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/crypto_dag.py took 0.304 seconds
+[2026-06-16T15:39:16.398+0000] {processor.py:161} INFO - Started process (PID=444) to work on /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:39:16.401+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/crypto_dag.py for tasks to queue
+[2026-06-16T15:39:16.405+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:39:16.403+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:39:16.469+0000] {processor.py:840} INFO - DAG(s) 'crypto_lakehouse_PRODUCTION' retrieved from /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:39:16.541+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:39:16.540+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-06-16T15:39:16.603+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:39:16.602+0000] {dag.py:3823} INFO - Setting next_dagrun for crypto_lakehouse_PRODUCTION to 2026-06-16 15:30:00+00:00, run_after=2026-06-16 15:45:00+00:00
+[2026-06-16T15:39:16.652+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/crypto_dag.py took 0.263 seconds
+[2026-06-16T15:39:47.042+0000] {processor.py:161} INFO - Started process (PID=449) to work on /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:39:47.046+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/crypto_dag.py for tasks to queue
+[2026-06-16T15:39:47.050+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:39:47.049+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:39:47.137+0000] {processor.py:840} INFO - DAG(s) 'crypto_lakehouse_PRODUCTION' retrieved from /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:39:47.218+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:39:47.218+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-06-16T15:39:47.288+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:39:47.288+0000] {dag.py:3823} INFO - Setting next_dagrun for crypto_lakehouse_PRODUCTION to 2026-06-16 15:30:00+00:00, run_after=2026-06-16 15:45:00+00:00
+[2026-06-16T15:39:47.342+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/crypto_dag.py took 0.316 seconds
+[2026-06-16T15:40:17.953+0000] {processor.py:161} INFO - Started process (PID=454) to work on /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:40:17.956+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/crypto_dag.py for tasks to queue
+[2026-06-16T15:40:17.959+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:40:17.958+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:40:18.031+0000] {processor.py:840} INFO - DAG(s) 'crypto_lakehouse_PRODUCTION' retrieved from /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:40:18.107+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:40:18.107+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-06-16T15:40:18.182+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:40:18.181+0000] {dag.py:3823} INFO - Setting next_dagrun for crypto_lakehouse_PRODUCTION to 2026-06-16 15:30:00+00:00, run_after=2026-06-16 15:45:00+00:00
+[2026-06-16T15:40:18.237+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/crypto_dag.py took 0.292 seconds
+[2026-06-16T15:40:48.741+0000] {processor.py:161} INFO - Started process (PID=459) to work on /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:40:48.744+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/crypto_dag.py for tasks to queue
+[2026-06-16T15:40:48.747+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:40:48.746+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:40:48.815+0000] {processor.py:840} INFO - DAG(s) 'crypto_lakehouse_PRODUCTION' retrieved from /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:40:48.891+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:40:48.891+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-06-16T15:40:48.961+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:40:48.961+0000] {dag.py:3823} INFO - Setting next_dagrun for crypto_lakehouse_PRODUCTION to 2026-06-16 15:30:00+00:00, run_after=2026-06-16 15:45:00+00:00
+[2026-06-16T15:40:49.010+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/crypto_dag.py took 0.279 seconds
+[2026-06-16T15:41:19.234+0000] {processor.py:161} INFO - Started process (PID=464) to work on /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:41:19.238+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/crypto_dag.py for tasks to queue
+[2026-06-16T15:41:19.241+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:41:19.240+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:41:19.315+0000] {processor.py:840} INFO - DAG(s) 'crypto_lakehouse_PRODUCTION' retrieved from /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:41:19.395+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:41:19.394+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-06-16T15:41:19.467+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:41:19.467+0000] {dag.py:3823} INFO - Setting next_dagrun for crypto_lakehouse_PRODUCTION to 2026-06-16 15:30:00+00:00, run_after=2026-06-16 15:45:00+00:00
+[2026-06-16T15:41:19.521+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/crypto_dag.py took 0.298 seconds
+[2026-06-16T15:41:50.336+0000] {processor.py:161} INFO - Started process (PID=469) to work on /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:41:50.341+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/crypto_dag.py for tasks to queue
+[2026-06-16T15:41:50.345+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:41:50.344+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:41:50.465+0000] {processor.py:840} INFO - DAG(s) 'crypto_lakehouse_PRODUCTION' retrieved from /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:41:50.555+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:41:50.554+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-06-16T15:41:50.614+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:41:50.614+0000] {dag.py:3823} INFO - Setting next_dagrun for crypto_lakehouse_PRODUCTION to 2026-06-16 15:30:00+00:00, run_after=2026-06-16 15:45:00+00:00
+[2026-06-16T15:41:50.665+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/crypto_dag.py took 0.345 seconds
+[2026-06-16T15:42:15.996+0000] {processor.py:161} INFO - Started process (PID=474) to work on /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:42:15.999+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/crypto_dag.py for tasks to queue
+[2026-06-16T15:42:16.002+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:42:16.001+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:42:16.074+0000] {processor.py:840} INFO - DAG(s) 'crypto_lakehouse_PRODUCTION' retrieved from /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:42:16.157+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:42:16.156+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-06-16T15:42:16.227+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:42:16.226+0000] {dag.py:3823} INFO - Setting next_dagrun for crypto_lakehouse_PRODUCTION to 2026-06-16 15:30:00+00:00, run_after=2026-06-16 15:45:00+00:00
+[2026-06-16T15:42:16.278+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/crypto_dag.py took 0.291 seconds
+[2026-06-16T15:42:46.847+0000] {processor.py:161} INFO - Started process (PID=479) to work on /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:42:46.850+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/crypto_dag.py for tasks to queue
+[2026-06-16T15:42:46.853+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:42:46.852+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:42:46.924+0000] {processor.py:840} INFO - DAG(s) 'crypto_lakehouse_PRODUCTION' retrieved from /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:42:47.003+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:42:47.002+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-06-16T15:42:47.080+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:42:47.080+0000] {dag.py:3823} INFO - Setting next_dagrun for crypto_lakehouse_PRODUCTION to 2026-06-16 15:30:00+00:00, run_after=2026-06-16 15:45:00+00:00
+[2026-06-16T15:42:47.148+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/crypto_dag.py took 0.311 seconds
+[2026-06-16T15:43:13.754+0000] {processor.py:161} INFO - Started process (PID=484) to work on /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:43:13.757+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/crypto_dag.py for tasks to queue
+[2026-06-16T15:43:13.763+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:43:13.761+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:43:13.852+0000] {processor.py:840} INFO - DAG(s) 'crypto_lakehouse_PRODUCTION' retrieved from /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:43:13.931+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:43:13.931+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-06-16T15:43:14.031+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:43:14.030+0000] {dag.py:3823} INFO - Setting next_dagrun for crypto_lakehouse_PRODUCTION to 2026-06-16 15:30:00+00:00, run_after=2026-06-16 15:45:00+00:00
+[2026-06-16T15:43:14.089+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/crypto_dag.py took 0.346 seconds
+[2026-06-16T15:43:44.813+0000] {processor.py:161} INFO - Started process (PID=489) to work on /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:43:44.817+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/crypto_dag.py for tasks to queue
+[2026-06-16T15:43:44.820+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:43:44.819+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:43:44.909+0000] {processor.py:840} INFO - DAG(s) 'crypto_lakehouse_PRODUCTION' retrieved from /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:43:44.986+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:43:44.985+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-06-16T15:43:45.059+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:43:45.058+0000] {dag.py:3823} INFO - Setting next_dagrun for crypto_lakehouse_PRODUCTION to 2026-06-16 15:30:00+00:00, run_after=2026-06-16 15:45:00+00:00
+[2026-06-16T15:43:45.132+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/crypto_dag.py took 0.328 seconds
+[2026-06-16T15:44:19.355+0000] {processor.py:161} INFO - Started process (PID=494) to work on /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:44:19.357+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/crypto_dag.py for tasks to queue
+[2026-06-16T15:44:19.360+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:44:19.360+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:44:19.428+0000] {processor.py:840} INFO - DAG(s) 'crypto_lakehouse_PRODUCTION' retrieved from /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:44:19.511+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:44:19.510+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-06-16T15:44:11.321+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:44:19.575+0000] {dag.py:3823} INFO - Setting next_dagrun for crypto_lakehouse_PRODUCTION to 2026-06-16 15:30:00+00:00, run_after=2026-06-16 15:45:00+00:00
+[2026-06-16T15:44:11.374+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/crypto_dag.py took 0.284 seconds
+[2026-06-16T15:44:35.678+0000] {processor.py:161} INFO - Started process (PID=499) to work on /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:44:35.682+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/crypto_dag.py for tasks to queue
+[2026-06-16T15:44:35.685+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:44:35.684+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:44:35.762+0000] {processor.py:840} INFO - DAG(s) 'crypto_lakehouse_PRODUCTION' retrieved from /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:44:35.836+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:44:35.836+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-06-16T15:44:35.902+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:44:35.902+0000] {dag.py:3823} INFO - Setting next_dagrun for crypto_lakehouse_PRODUCTION to 2026-06-16 15:30:00+00:00, run_after=2026-06-16 15:45:00+00:00
+[2026-06-16T15:44:35.968+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/crypto_dag.py took 0.300 seconds
+[2026-06-16T15:45:02.880+0000] {processor.py:161} INFO - Started process (PID=508) to work on /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:45:02.884+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/crypto_dag.py for tasks to queue
+[2026-06-16T15:45:02.887+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:45:02.886+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:45:02.963+0000] {processor.py:840} INFO - DAG(s) 'crypto_lakehouse_PRODUCTION' retrieved from /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:45:03.036+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:45:03.035+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-06-16T15:45:03.108+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:45:03.108+0000] {dag.py:3823} INFO - Setting next_dagrun for crypto_lakehouse_PRODUCTION to 2026-06-16 15:45:00+00:00, run_after=2026-06-16 16:00:00+00:00
+[2026-06-16T15:45:03.160+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/crypto_dag.py took 0.294 seconds
+[2026-06-16T15:45:31.466+0000] {processor.py:161} INFO - Started process (PID=523) to work on /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:45:31.477+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/crypto_dag.py for tasks to queue
+[2026-06-16T15:45:31.489+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:45:31.487+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:45:31.573+0000] {processor.py:840} INFO - DAG(s) 'crypto_lakehouse_PRODUCTION' retrieved from /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:45:31.691+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:45:31.691+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-06-16T15:45:31.837+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:45:31.837+0000] {dag.py:3823} INFO - Setting next_dagrun for crypto_lakehouse_PRODUCTION to 2026-06-16 15:45:00+00:00, run_after=2026-06-16 16:00:00+00:00
+[2026-06-16T15:45:31.896+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/crypto_dag.py took 0.449 seconds
+[2026-06-16T15:45:57.501+0000] {processor.py:161} INFO - Started process (PID=538) to work on /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:45:57.504+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/crypto_dag.py for tasks to queue
+[2026-06-16T15:45:57.508+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:45:57.507+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:45:57.604+0000] {processor.py:840} INFO - DAG(s) 'crypto_lakehouse_PRODUCTION' retrieved from /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:45:57.702+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:45:57.702+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-06-16T15:45:57.774+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:45:57.773+0000] {dag.py:3823} INFO - Setting next_dagrun for crypto_lakehouse_PRODUCTION to 2026-06-16 15:45:00+00:00, run_after=2026-06-16 16:00:00+00:00
+[2026-06-16T15:45:57.830+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/crypto_dag.py took 0.342 seconds
+[2026-06-16T15:46:28.221+0000] {processor.py:161} INFO - Started process (PID=543) to work on /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:46:28.224+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/crypto_dag.py for tasks to queue
+[2026-06-16T15:46:28.228+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:46:28.227+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:46:28.375+0000] {processor.py:840} INFO - DAG(s) 'crypto_lakehouse_PRODUCTION' retrieved from /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:46:28.501+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:46:28.501+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-06-16T15:46:28.588+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:46:28.587+0000] {dag.py:3823} INFO - Setting next_dagrun for crypto_lakehouse_PRODUCTION to 2026-06-16 15:45:00+00:00, run_after=2026-06-16 16:00:00+00:00
+[2026-06-16T15:46:28.648+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/crypto_dag.py took 0.441 seconds
+[2026-06-16T15:46:59.004+0000] {processor.py:161} INFO - Started process (PID=548) to work on /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:46:59.007+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/crypto_dag.py for tasks to queue
+[2026-06-16T15:46:59.010+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:46:59.009+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:46:59.078+0000] {processor.py:840} INFO - DAG(s) 'crypto_lakehouse_PRODUCTION' retrieved from /opt/airflow/dags/crypto_dag.py
+[2026-06-16T15:46:59.157+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:46:59.156+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-06-16T15:46:59.213+0000] {logging_mixin.py:188} INFO - [2026-06-16T15:46:59.213+0000] {dag.py:3823} INFO - Setting next_dagrun for crypto_lakehouse_PRODUCTION to 2026-06-16 15:45:00+00:00, run_after=2026-06-16 16:00:00+00:00
+[2026-06-16T15:46:59.262+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/crypto_dag.py took 0.269 seconds
