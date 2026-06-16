@@ -1,0 +1,98 @@
+services:
+  # --- 1. STORAGE: MinIO (Simulateur S3 Local) ---
+  minio:
+    image: minio/minio
+    ports:
+      - "9000:9000" # API Port
+      - "9001:9001" # Console UI Port
+    environment:
+      - MINIO_ROOT_USER=admin
+      - MINIO_ROOT_PASSWORD=password
+    command: server /data --console-address ":9001"
+    volumes:
+      - minio_data:/data
+
+  # --- 2. COMPUTE: Apache Spark (Cluster Local) ---
+  spark-master:
+    image: apache/spark:3.5.1
+    container_name: spark-master
+    user: root 
+    command: /opt/spark/bin/spark-class org.apache.spark.deploy.master.Master
+    environment:
+      - SPARK_MASTER_HOST=spark-master
+      - SPARK_MASTER_PORT=7077
+    ports:
+      - "8080:8080" # Spark UI
+      - "7077:7077"
+    volumes:
+      - ./code:/opt/spark/code
+
+  spark-worker:
+    image: apache/spark:3.5.1
+    container_name: spark-worker
+    user: root
+    command: /opt/spark/bin/spark-class org.apache.spark.deploy.worker.Worker spark://spark-master:7077
+    environment:
+      - SPARK_WORKER_CORES=2
+      - SPARK_WORKER_MEMORY=2g
+    depends_on:
+      - spark-master
+
+  # --- 3. ORCHESTRATION: Apache Airflow ---
+  postgres:
+    image: postgres:13
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=admin123
+      - POSTGRES_DB=crypto_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  airflow-webserver:
+    image: apache/airflow:2.8.1
+    restart: always
+    depends_on:
+      - postgres
+    environment:
+      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://postgres:admin123@postgres/crypto_db
+      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+      - AIRFLOW__CORE__LOAD_EXAMPLES=False
+    ports:
+      - "8081:8080" # Port 8081 pour éviter le conflit avec Spark UI
+    command: bash -c "airflow db migrate && airflow users create --username admin --password admin --firstname Admin --lastname User --role Admin --email admin@example.com && airflow webserver"
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+
+  airflow-scheduler:
+    image: apache/airflow:2.8.1
+    restart: always
+    depends_on:
+      - postgres
+    environment:
+      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://postgres:admin123@postgres/crypto_db
+      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+    command: >
+      bash -c "
+      /home/airflow/.local/bin/airflow scheduler
+      "
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./code:/opt/airflow/code
+      - /var/run/docker.sock:/var/run/docker.sock
+  dashboard:
+    image: python:3.9-slim
+    ports:
+      - "8501:8501" # Port par défaut de Streamlit
+    volumes:
+      - ./code:/app
+    working_dir: /app
+    command: bash -c "pip install streamlit pandas pyarrow s3fs plotly && streamlit run app.py"
+    depends_on:
+      - spark-master
+
+volumes:
+  minio_data:
+  postgres_data:
+  
