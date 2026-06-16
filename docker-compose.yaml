@@ -25,7 +25,7 @@ services:
       - "8080:8080" # Spark UI
       - "7077:7077"
     volumes:
-      - ./code:/opt/spark/code
+      - ./Scripts:/opt/spark/code  
 
   spark-worker:
     image: apache/spark:3.5.1
@@ -79,20 +79,20 @@ services:
     volumes:
       - ./dags:/opt/airflow/dags
       - ./logs:/opt/airflow/logs
-      - ./code:/opt/airflow/code
+      - ./Scripts:/opt/airflow/code  
       - /var/run/docker.sock:/var/run/docker.sock
+
   dashboard:
     image: python:3.9-slim
     ports:
       - "8501:8501" # Port par défaut de Streamlit
     volumes:
-      - ./code:/app
+      - ./Scripts:/app  
     working_dir: /app
-    command: bash -c "pip install streamlit pandas pyarrow s3fs plotly && streamlit run app.py"
+    command: bash -c "pip install streamlit pandas pyarrow s3fs plotly && streamlit run /app/app.py" # Sécurité ajoutée sur le chemin
     depends_on:
       - spark-master
 
 volumes:
   minio_data:
   postgres_data:
-  
