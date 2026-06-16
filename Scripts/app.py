@@ -389,6 +389,8 @@ if 'exact_time' in df.columns and len(df) > 1:
             gridcolor='rgba(255,255,255,0.04)',
             zeroline=False,
             tickfont=dict(size=10, color='#475569'),
+            autorange=False, # <-- Modification ici pour permettre le zoom forcé
+            fixedrange=False
         ),
         hovermode='x unified',
         hoverlabel=dict(
@@ -416,6 +418,10 @@ if 'exact_time' in df.columns and len(df) > 1:
             hovertemplate='<b>%{y:$,.2f}</b><extra></extra>'
         ))
         fig_btc.update_layout(**chart_cfg, height=220)
+        # <-- AJOUT ICI : Zoom dynamique sur la variation du BTC (Marge de 0.2%)
+        ymin_btc = df['bitcoin_price'].min() * 0.998
+        ymax_btc = df['bitcoin_price'].max() * 1.002
+        fig_btc.update_yaxes(range=[ymin_btc, ymax_btc])
         st.plotly_chart(fig_btc, use_container_width=True, config={'displayModeBar': False})
         st.markdown('</div>', unsafe_allow_html=True)
 
@@ -433,6 +439,10 @@ if 'exact_time' in df.columns and len(df) > 1:
             hovertemplate='<b>%{y:$,.2f}</b><extra></extra>'
         ))
         fig_eth.update_layout(**chart_cfg, height=220)
+        # <-- AJOUT ICI : Zoom dynamique sur la variation de l'ETH (Marge de 0.2%)
+        ymin_eth = df['ethereum_price'].min() * 0.998
+        ymax_eth = df['ethereum_price'].max() * 1.002
+        fig_eth.update_yaxes(range=[ymin_eth, ymax_eth])
         st.plotly_chart(fig_eth, use_container_width=True, config={'displayModeBar': False})
         st.markdown('</div>', unsafe_allow_html=True)
 
@@ -458,6 +468,8 @@ if 'exact_time' in df.columns and len(df) > 1:
             barmode='group',
             bargap=0.2,
         )
+        # On remet l'axe Y à 0 pour le graphique des volumes
+        fig_vol.update_yaxes(autorange=True)
         st.plotly_chart(fig_vol, use_container_width=True, config={'displayModeBar': False})
         st.markdown('</div>', unsafe_allow_html=True)
 
